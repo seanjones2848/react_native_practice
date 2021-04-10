@@ -2,9 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { ScrollView, FlatList, StyleSheet, Text, TextInput, View, Image, Button } from 'react-native';
 
-import { Cat, ZodiacFeeling, ZodiacTranslate } from './components.js';
-
-import * as data from './data.json';
+import { Cat, ZodiacFeeling, ZodiacTranslate, ListSigns } from './components.js';
 
 export default function App() {
   const[sign, setSign] = useState(0);
@@ -16,15 +14,15 @@ export default function App() {
   );
 }
 
-function ListSigns() {
-  return (
-    <>
-      <FlatList
-        data={data.signs}
-        renderItem={({item}) =>
-          <Text>{item.name} + {item.emoji}</Text>
-        }
-      />
-    </>
-  )
-}
+
+// I want to:
+// ask for sign
+// provide function based on sign
+// ability to cancel selection, pick again
+
+// components:
+// controller/container
+// entry button
+// cancel button
+// zodiac picker
+// zodic fun

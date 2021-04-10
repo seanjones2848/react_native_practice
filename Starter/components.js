@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Text, TextInput, StyleSheet, View, Button, Image } from 'react-native';
+import { Text, TextInput, StyleSheet, View, Button, Image, FlatList } from 'react-native';
+
+import * as data from './data.json';
 
 export function ZodiacFeeling(props) {
     const [isExcited, setIsExcited] = useState(true);
@@ -38,6 +40,19 @@ export function ZodiacTranslate(props) {
         </View>
     )
 }
+
+export function ListSigns() {
+    return (
+      <View style={styles.container}>
+        <FlatList
+          data={data.signs}
+          renderItem={({item}) =>
+            <Text>{item.name} + {item.emoji}</Text>
+          }
+        />
+      </View>
+    )
+  }
 
 const styles = StyleSheet.create({
     container: {
