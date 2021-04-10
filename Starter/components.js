@@ -5,7 +5,7 @@ export function Zodiac(props) {
     return (
         <View style={styles.container}>
             <Text>
-                This is the {props.sign} sign!
+                This {props.sign} sign is feeling {props.attribute}!
             </Text>
         </View>
     )
