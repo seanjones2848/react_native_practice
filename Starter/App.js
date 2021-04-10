@@ -9,11 +9,18 @@ export default function App() {
     "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Piscies"];
   const zodiac_attribute = ["Spicy", "Sleepy", "Duplicitous", "Emotional", "Loud", "Shy",
     "Judgy", "Fierce", "Adventurous", "Focused", "Etherial", "Fishy"];
+  const zodiac_emoji = ["♈️", "♉️", "♊️", "♋️", "♌️", "♍️", "♎️", "♏️",
+    "♐️", "♑️", "♒️", "♓️"]
+
 
   return (
     <ScrollView>
       {zodiac_signs.map((sign, index) => {
-        return <Zodiac sign={sign} attribute={zodiac_attribute[index]}/>
+        return <Zodiac 
+          sign={sign}
+          attribute={zodiac_attribute[index]}
+          emoji={zodiac_emoji[index]}
+        />
       })}
     </ScrollView>
   );
