@@ -1,29 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, View, Image } from 'react-native';
+import React, { useState } from 'react';
+import { ScrollView, FlatList, StyleSheet, Text, TextInput, View, Image, Button } from 'react-native';
 
-import { Cat, Zodiac } from './components.js';
+import { Cat, ZodiacFeeling, ZodiacTranslate } from './components.js';
+
+import * as data from './data.json';
 
 export default function App() {
-  const zodiac_signs = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo",
-    "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Piscies"];
-  const zodiac_attribute = ["Spicy", "Sleepy", "Duplicitous", "Emotional", "Loud", "Shy",
-    "Judgy", "Fierce", "Adventurous", "Focused", "Etherial", "Fishy"];
-  const zodiac_emoji = ["♈️", "♉️", "♊️", "♋️", "♌️", "♍️", "♎️", "♏️",
-    "♐️", "♑️", "♒️", "♓️"]
-
+  const[sign, setSign] = useState(0);
 
   return (
     <ScrollView>
-      {zodiac_signs.map((sign, index) => {
-        return <Zodiac 
-          sign={sign}
-          attribute={zodiac_attribute[index]}
-          emoji={zodiac_emoji[index]}
-        />
-      })}
+      <ListSigns />
     </ScrollView>
   );
 }
 
-
+function ListSigns() {
+  return (
+    <>
+      <FlatList
+        data={data.signs}
+        renderItem={({item}) =>
+          <Text>{item.name} + {item.emoji}</Text>
+        }
+      />
+    </>
+  )
+}

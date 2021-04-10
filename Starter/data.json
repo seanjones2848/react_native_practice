@@ -1,0 +1,66 @@
+{
+    "signs": [
+        {
+            "name": "Aries",
+            "attribute": "Spicy",
+            "emoji": "♈️"
+        },
+        {
+            "name": "Taurus",
+            "attribute": "Sleepy",
+            "emoji": "♉️"
+        },
+        {
+            "name": "Gemini",
+            "attribute": "Duplicitous",
+            "emoji": "♊️"
+        },
+        {
+            "name": "Cancer",
+            "attribute": "Emotional",
+            "emoji": "♋️"
+        },
+        {
+            "name": "Leo",
+            "attribute": "Loud",
+            "emoji": "♌️"
+        },
+        {
+            "name": "Virgo",
+            "attribute": "Shy",
+            "emoji": "♍️"
+        },
+        {
+            "name": "Libra",
+            "attribute": "Judgy",
+            "emoji": "♎️"
+        },
+        {
+            "name": "Scorpio",
+            "attribute": "Fierce",
+            "emoji": "♏️"
+        },
+        {
+            "name": "Sagitarius",
+            "attribute": "Adventurous",
+            "emoji": "♐️"
+        },
+        {
+            "name": "Capricorn",
+            "attribute": "Focused",
+            "emoji": "♑️"
+        },
+        {
+            "name": "Aquarius",
+            "attribute": "Etherial",
+            "emoji": "♒️"
+        },
+        {
+            "name": "Pisces",
+            "attribute": "Intuitive",
+            "emoji": "♓️"
+        }
+    ],
+    "planets": [],
+    "houses": []
+}
