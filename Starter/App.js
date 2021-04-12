@@ -1,7 +1,6 @@
 // I want to:
 // ask for sign
 // provide function based on sign
-// ability to cancel selection, pick again
 
 // components:
 // controller/container
